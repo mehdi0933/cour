@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bloc{
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulaire de réservation</h1>
+  <form>
+    <div class="bloc">
+      <label for="">Nom *:</label> <br>
+      <input id="nom" type="text">
+    </div>
+    <div class="bloc">
+      <label for="">Prenom :</label> <br>
+      <input id="prenom" type="text">
+    </div>
+    <div class="bloc">
+      <label for="">Telephone :</label> <br>
+      <input id="telephone" type="text">
+    </div>
+    <div class="bloc">
+      <label for="">Email * :</label> <br>
+      <input id="email" type="text">
+    </div>
+
+    <div class="réservation">
+      <p>Votre Reservation:</p>
+      <div class="row">
+        <select id="choix1">
+          <option value="Demi-journée">Demi-journée</option>
+          <option value="Journée">Journée</option>
+          <option value="Repas">Repas</option>
+        </select>
+        <input type="number" min="0" placeholder="Qte" id="qte-choix1">
+        <input type="text" disabled placeholder="sous total 1" id="sous-total1">
+      </div>
+
+      <div class="row">
+        <select id="choix2">
+          <option value="Demi-journée">Demi-journée</option>
+          <option value="Journée">Journée</option>
+          <option value="Repas">Repas</option>
+        </select>
+        <input type="number" min="0" placeholder="Qte" id="qte-choix2">
+        <input type="text" disabled placeholder="sous total 2" id="sous-total2">
+      </div>
+
+      <div class="row">
+        <select id="choix3">
+          <option value="Demi-journée">Demi-journée</option>
+          <option value="Journée">Journée</option>
+          <option value="Repas">Repas</option>
+        </select>
+        <input type="number" min="0" placeholder="Qte" id="qte-choix3">
+        <input type="text" disabled placeholder="sous total 3" id="sous-total3">
+      </div>
+
+      <div>
+        <label>Sous total HT:</label> <br>
+        <input id="sous-total-HT" type="text" disabled placeholder="sous total HT"> <label>€</label>
+      </div>
+
+      <div>
+        <label>Total TTC (TVA 20%):</label> <br>
+        <input id="total-TTC" type="text" disabled> <label for="">€</label>
+      </div>
+      <input id="cdg" type="checkbox"> <label id="condition" for="">Condition generale d'utiltilsation</label>
+    </div>
+  </form>
+  <button id="verifier">Verifier</button>
+  <button id="reinitialiser">Reinitialiser</button>
+  <button id="envoyer">Envoyer</button>
+  <script src="reservation.js"></script>
+</body>
+</html>

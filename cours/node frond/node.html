@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>  
+<title>Manipulation DOM</title>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+<script type="text/javascript"> 
+
+  function addListItem(){
+    var liste = document.getElementById("myList");
+    var li = document.getElementsByTagName("li").length;
+
+    var item = document.createElement("li");
+    var txt = document.createTextNode("Element " + li++);
+  
+
+    liste.appendChild(item);
+    item.appendChild(txt);
+  }
+</script>
+</head>  
+<body>  
+<h1>Manipulation du DOM</h1>  
+<h2>Insertion d'éléments</h2>  
+Ajouter des éléments dans une liste HTML  
+<ul id="myList">
+  <li>Element 1</li> 
+  <li>Element 2</li>
+  <li>Element 3</li>
+</ul>  
+<a href="javascript:addListItem()">Ajouter un élément à la liste</a>  
+  
+<h2>Parcours d'éléments</h2>  
+<p>Le DOM est un modèle objet.</p>  
+<p id="1"> Il permet d'interagir avecn'importe quelle partie du document.</p>  
+<p>Il existe de nombreux moyens de parcourir le document. Avec les noms de balises, avec les attributs, les ID.</p>  
+<p>Néanmoins, attention, le DOM n'est pas implémenté de la même manière dans tous les navigateurs. Certains navigateurs comme IE6 et IE7 ne respectent pas la norme.</p> 
+
+<button id="add">add item</button>
+
+<script>
+  document.getElementById('add').addEventListener('click', addListItem);
+  // var p = document.getElementsByTagName("p");
+  // var p1 = document.getElementById("1");
+  // var p1childs = p1.childNodes;
+  // for(let i = 0; i < p1childs.length; i++){
+  //   console.log(p1childs[i].nodeValue);
+  // }
+
+  // for(let i = 0; i < p.length; i ++){
+  //   console.log(p[i].firstChild.nodeValue);
+  // }
+</script>
+</body>  
+</html>  
+
+<!--  Exercice n°1 : Parcourir le DOM
+
+A partir du code précédent, créez un script qui liste et affiche le contenu de toutes les balises <p> comprises dans la page. -->
+
+
+<!-- 
+  Exercice n°2 : Modifier le DOM
+  A partir de la même page HTML, créez un script qui insère dynamiquement un élement <li> dans la liste "myList" et qui créé le label en fonction du nombre de <li> existants dans la page.
+ -->
